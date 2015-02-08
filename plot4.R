@@ -17,14 +17,6 @@ hhPowerCons$newdate <- as.Date(hhPowerCons$Date, format = "%d/%m/%Y")
 hhPowerCons$DateTime <- as.POSIXct(paste(hhPowerCons$newdate, hhPowerCons$Time))
 
 
-# plot3:
-png("plot3.png", width = 480, height = 480)
-plot(hhPowerCons$DateTime, hhPowerCons$Sub_metering_1, type="l", ylab= "Energy sub metering", xlab="")
-lines(hhPowerCons$DateTime, hhPowerCons$Sub_metering_2, type="l", col="red")
-lines(hhPowerCons$DateTime, hhPowerCons$Sub_metering_3, type="l", col="blue")
-legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty=1, col=c("black", "red", "blue"))
-dev.off()
-
 # plot4:
 png("plot4.png", width = 480, height = 480)
 par(mfcol=c(2,2)) # adding plots in col-wised manner.
